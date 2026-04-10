@@ -1,0 +1,80 @@
+# 🏪 7-Eleven Hub
+
+En komplett hub for ansatte med sjekklister, vaktplan, varetelling, dagsrapport, opplæring og chat.
+
+---
+
+## 🚀 Slik deployer du appen (få en lenke)
+
+### Alternativ 1: Vercel (anbefalt – gratis)
+
+1. **Opprett en GitHub-konto** på [github.com](https://github.com) (hvis du ikke har en)
+2. **Last opp prosjektet til GitHub:**
+   - Gå til [github.com/new](https://github.com/new)
+   - Gi repoet et navn, f.eks. `7eleven-hub`
+   - Trykk «Create repository»
+   - Trykk «uploading an existing file» og dra inn ALLE filene fra denne mappen
+   - Trykk «Commit changes»
+3. **Koble til Vercel:**
+   - Gå til [vercel.com](https://vercel.com) og logg inn med GitHub
+   - Trykk «Add New → Project»
+   - Velg repoet `7eleven-hub`
+   - Framework Preset: velg **Vite**
+   - Trykk «Deploy»
+4. **Ferdig!** Du får en link som `https://7eleven-hub.vercel.app` 🎉
+
+### Alternativ 2: Netlify (også gratis)
+
+1. Gå til [app.netlify.com](https://app.netlify.com)
+2. Registrer deg / logg inn
+3. Trykk «Add new site → Deploy manually»
+4. Du må bygge prosjektet først lokalt:
+   ```bash
+   npm install
+   npm run build
+   ```
+5. Dra `dist`-mappen inn på Netlify
+6. Ferdig! Du får en link.
+
+---
+
+## 📱 Installer som app på mobilen
+
+Når appen er deployet og du åpner linken på mobilen:
+
+**iPhone (Safari):**
+- Trykk på del-ikonet (firkant med pil opp)
+- Velg «Legg til på Hjem-skjerm»
+
+**Android (Chrome):**
+- Trykk på de tre prikkene øverst til høyre
+- Velg «Legg til på startskjermen»
+
+Da får de ansatte et app-ikon på telefonen sin! 📲
+
+---
+
+## 🛠 Kjør lokalt (for utvikling)
+
+```bash
+npm install
+npm run dev
+```
+
+Åpne [http://localhost:5173](http://localhost:5173) i nettleseren.
+
+---
+
+## 📂 Filstruktur
+
+```
+7eleven-hub/
+├── index.html          ← Hovedside
+├── package.json        ← Avhengigheter
+├── vite.config.js      ← Byggeverktøy
+├── public/
+│   └── manifest.json   ← PWA-manifest (for app-installasjon)
+└── src/
+    ├── main.jsx        ← Oppstart
+    └── App.jsx         ← Hele appen
+```
